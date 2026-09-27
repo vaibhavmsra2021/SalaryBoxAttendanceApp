@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: attendance-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: API_SECRET
+        generateValue: true
+      - key: MATCH_THRESHOLD
+        value: "0.363"

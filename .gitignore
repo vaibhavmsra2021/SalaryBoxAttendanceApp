@@ -1,0 +1,14 @@
+backend/.env
+backend/.venv
+backend/models/*.onnx
+backend/tests/fixtures/*
+!backend/tests/fixtures/.gitkeep
+backend/**/__pycache__/
+backend/.pytest_cache/
+mobile/node_modules/
+mobile/.env
+mobile/.expo/
+mobile/dist/
+mobile/android/
+*.apk
+*.pyc
